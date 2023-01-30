@@ -1,0 +1,127 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-size: 14px;
+    line-height: 1.5;
+    vertical-align: top;
+    box-sizing: border-box; /*선px 박스사이즈*/
+    outline: none; /*강조시켜주는 라인*/
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #eee;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #666;
+}
+
+::-webkit-scrollbar-button{
+    display: none;
+}
+
+
+html{
+    overflow-x: hidden;
+    font-size: 14px;
+}
+
+
+body{
+    text-align: center;
+}
+
+ul, ol{
+    list-style: none;
+    font-size: 0px;
+}
+
+ul li, ol li{
+    display: inline-block;
+}
+
+span, a, strong, b{
+    display: inline-block;
+    line-height: inherit;/*부모의 속성을 받아오는것*/
+    font-size: inherit;
+    color: inherit;
+    vertical-align: inherit;
+}
+
+a{
+    text-decoration: none;/*밑줄*/
+}
+
+.wrap{ /*틀을만드는것*/
+    width: 1200px;
+    display: inline-block;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.pc{
+    display: block !important;
+}
+.mobile{
+    display: none !important;
+}
+
+.name, .sub, .text, .content, .context{
+    transition: font-size .4s 0s;
+}
+
+
+
+
+
+@media only screen and (min-width:0px) and (max-width:1200px){
+    .pc{
+        display: none !important;
+    }
+    .mobile{
+        display: block !important;
+    }
+     
+    .wrap{ 
+        width: 100%;
+        padding: 0px 15px;
+    }
+    
+}
+
+
+@media only screen and (min-width:0px) and (max-width:1000px){
+
+}
+
+
+@media only screen and (min-width:0px) and (max-width:800px){
+    html{
+        font-size: 13px;
+    }
+}
+
+
+@media only screen and (min-width:0px) and (max-width:600px){
+    html{
+        font-size: 12px;
+    }
+}
+
+
+@media only screen and (min-width:0px) and (max-width:400px){
+     html{
+        font-size: 11px;
+    }
+}
+
